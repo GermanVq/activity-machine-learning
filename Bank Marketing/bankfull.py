@@ -113,16 +113,20 @@ fpr_lr, tpr_lr, _ = roc_curve(y_test, probs_lr)
 
 #Confusion_matrix
 cm_lg = confusion_matrix(y_test, y_pred)
-print('confusion matrix LR')
-print(':', cm_lg) 
+print('-------confusion matrix LR--------')
+print('', cm_lg) 
+print('----------------------------------')
 
 """[Imprimir las métricas de precisión, recall y f1 de cada clase de cada
 modelo]"""
 #Classifecation report
+print('----------------Classification report LR------------------')
 print(classification_report(y_test,y_pred))
 
 results = pd.DataFrame([['Logistic Regression (LR)', acc_va, acc_t, prec, rec, f1, auc]],
                columns = ['Model', 'Acc_Va', 'Acc_test', 'Precision', 'Recall', 'F1 Score', 'AUC'])
+print('----------------------------------------------------------')
+
 
 
 ############################ K-Nearest Neighbors ##################################
@@ -146,13 +150,16 @@ fpr_k, tpr_k, _ = roc_curve(y_test, probs_k)
 
 #Confusion matrix
 cm_k = confusion_matrix(y_test, y_pred)
-print('confusion matrix KKN')
-print(':', cm_k) 
+print('--------Confusion matrix KKN--------')
+print('', cm_k) 
+print('------------------------------------')
 
 """[Imprimir las métricas de precisión, recall y f1 de cada clase de cada
 modelo]"""
 #Classifecation report
+print('----------------Classification report KNN------------------')
 print(classification_report(y_test,y_pred))
+print('-----------------------------------------------------------')
 
 model_results = pd.DataFrame([['K-Nearest Neighbors (KNN)', acc_va, acc_t, prec, rec, f1, auc]],
                columns = ['Model', 'Acc_Va', 'Acc_test', 'Precision', 'Recall', 'F1 Score', 'AUC'])
@@ -181,13 +188,16 @@ fpr_svm, tpr_svm, _ = roc_curve(y_test, probs_svm)
 
 #Confusion matrix
 cm_svm = confusion_matrix(y_test, y_pred)
-print('confusion matrix SVM LINEAR')
+print('----confusion matrix SVM LINEAR-----')
 print(':', cm_svm) 
+print('------------------------------------')
 
 """[Imprimir las métricas de precisión, recall y f1 de cada clase de cada
 modelo]"""
 #Classifecation report
+print('----------------Classification report SVM------------------')
 print(classification_report(y_test,y_pred))
+print('----------------------------------------------------------')
 
 model_results = pd.DataFrame([['SVM (Linear)', acc_va, acc_t, prec, rec, f1, auc]],
                columns = ['Model', 'Acc_Va', 'Acc_test', 'Precision', 'Recall', 'F1 Score', 'AUC'])
@@ -216,13 +226,16 @@ fpr_dt, tpr_dt, _ = roc_curve(y_test, probs_dt)
 
 #confusion matrix
 cm_dt = confusion_matrix(y_test, y_pred)
-print('confusion matrix DTREE')
-print(':', cm_dt) 
+print('-------confusion matrix DTREE------')
+print('', cm_dt) 
+print('-----------------------------------')
 
 """[Imprimir las métricas de precisión, recall y f1 de cada clase de cada
 modelo]"""
 #Classifecation report
+print('----------------Classification report DT------------------')
 print(classification_report(y_test,y_pred))
+print('----------------------------------------------------------')
 
 model_results = pd.DataFrame([['Decision tree (Dtree)', acc_va, acc_t, prec, rec, f1, auc]],
                columns = ['Model', 'Acc_Va', 'Acc_test', 'Precision', 'Recall', 'F1 Score', 'AUC'])
@@ -250,13 +263,16 @@ fpr_nv, tpr_nv, _ = roc_curve(y_test, probs_nv)
 
 #confusion matix 
 cm_nb = confusion_matrix(y_test, y_pred)
-print('confusion matrix NB')
+print('--------confusion matrix NB---------')
 print(':', cm_nb) 
+print('------------------------------------')
 
 """[Imprimir las métricas de precisión, recall y f1 de cada clase de cada
 modelo]"""
 #Classifecation report
+print('----------------Classification report NB------------------')
 print(classification_report(y_test,y_pred))
+print('----------------------------------------------------------')
 
 model_results = pd.DataFrame([['Naive Bayes (Gauss)', acc_va, acc_t, prec, rec, f1, auc]],
                columns = ['Model', 'Acc_Va', 'Acc_test', 'Precision', 'Recall', 'F1 Score', 'AUC'])
