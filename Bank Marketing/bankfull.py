@@ -56,7 +56,7 @@ y = y.rename(columns= {'no': 'y'})
 
 #Splitting the Dataset into Training Set and Test Set
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2,stratify=y, random_state=0)
-kfold = KFold(n_splits = 10)
+
 
 #The Training Set is unbalanced. And so become necessary to organize it.
 pos_index = y_train[y_train.values == 1].index
